@@ -5,6 +5,7 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
+
 from adaptive_routing.agents import EpsilonGreedyAgent, GreedyAgent, UCBAgent
 from adaptive_routing.environment import default_environment
 from adaptive_routing.metrics import (
@@ -44,7 +45,7 @@ def run_agent(agent, steps: int = 10_000, seed: int = 42) -> ExperimentResult:
 
 def main() -> None:
     """Compare the first three algorithms."""
-    steps = 10_000
+    steps = 10
 
     agents = {
         "Greedy": GreedyAgent(5),
