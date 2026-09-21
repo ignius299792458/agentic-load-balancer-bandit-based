@@ -67,8 +67,8 @@ class ServerRoutingEnvironment:
         return float(reward), info
 
 
-def default_environment(seed: int | None = 42) -> ServerRoutingEnvironment:
-    """Create the five-server benchmark used by the experiments."""
+def five_environments_as_mab(seed: int | None = 42) -> ServerRoutingEnvironment:
+    """Create the five-server as Multi_Arms_Bandit (mab) benchmark used by the experiments."""
     servers = [
         Server("server-1", 120, 15, 0.02),
         Server("server-2", 80, 12, 0.05),

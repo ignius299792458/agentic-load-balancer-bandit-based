@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from adaptive_routing.agents import EpsilonGreedyAgent, GreedyAgent, UCBAgent
-from adaptive_routing.environment import default_environment
+from adaptive_routing.environment import five_environments_as_mab
 from adaptive_routing.metrics import (
     ExperimentResult,
     calculate_cumulative_regret,
@@ -17,7 +17,7 @@ from adaptive_routing.metrics import (
 
 def run_agent(agent, steps: int = 10_000, seed: int = 42) -> ExperimentResult:
     """Run one agent against a fresh environment."""
-    env = default_environment(seed=seed)
+    env = five_environments_as_mab(seed=seed)
 
     rewards = np.zeros(steps)
     latencies = np.zeros(steps)
@@ -57,7 +57,7 @@ def main() -> None:
         name: run_agent(agent, steps=steps, seed=42) for name, agent in agents.items()
     }
 
-    true_means = calculate_true_mean_rewards(default_environment(seed=42))
+    true_means = calculate_true_mean_rewards(five_environments_as_mab(seed=42))
 
     print("True mean reward by server:")
     for i, mean in enumerate(true_means):
