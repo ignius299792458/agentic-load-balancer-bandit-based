@@ -1,0 +1,42 @@
+------------------------------------------------------------------------------------------------
+STEP = 10
+------------------------------------------------------------------------------------------------
+
+True mean reward by server:
+  server-1: 0.3720
+  server-2: 0.5200
+  server-3: 0.2375
+  server-4: 0.5640
+  server-5: 0.4550
+
+Results:
+Greedy           | avg reward=0.7127 | failure rate=0.000% | avg latency=57.47 ms | regret=0.00
+  learned Q=[0.     0.     0.     0.7127 0.    ]
+
+Epsilon-Greedy   | avg reward=0.6911 | failure rate=0.000% | avg latency=61.78 ms | regret=0.11
+  learned Q=[0.     0.     0.     0.7184 0.4456]
+
+UCB              | avg reward=0.5138 | failure rate=0.000% | avg latency=97.24 ms | regret=1.34
+  learned Q=[0.475  0.5976 0.3176 0.6885 0.4904]
+
+
+------------------------------------------------------------------------------------------------
+STEP = 10_000
+------------------------------------------------------------------------------------------------
+
+True mean reward by server:
+  server-1: 0.3720
+  server-2: 0.5200
+  server-3: 0.2375
+  server-4: 0.5640
+  server-5: 0.4550
+
+Results:
+Greedy           | avg reward=0.5229 | failure rate=4.790% | avg latency=80.06 ms | regret=440.00
+  learned Q=[0.     0.5229 0.     0.     0.    ]
+
+Epsilon-Greedy   | avg reward=0.5355 | failure rate=6.390% | avg latency=71.62 ms | regret=297.01
+  learned Q=[0.3506 0.5222 0.2324 0.5666 0.4308]
+
+UCB              | avg reward=0.5307 | failure rate=5.980% | avg latency=73.89 ms | regret=383.39
+  learned Q=[0.3787 0.5249 0.2398 0.5697 0.4562]

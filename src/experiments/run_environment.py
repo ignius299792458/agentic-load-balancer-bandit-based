@@ -45,7 +45,7 @@ def run_agent(agent, steps: int = 10_000, seed: int = 42) -> ExperimentResult:
 
 def main() -> None:
     """Compare the first three algorithms."""
-    steps = 10
+    steps = 10_000
 
     agents = {
         "Greedy": GreedyAgent(5),
