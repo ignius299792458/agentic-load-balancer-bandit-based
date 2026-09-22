@@ -323,12 +323,7 @@ Bandit regret measures the performance lost by selecting an action whose expecte
 The cumulative pseudo-regret is:
 
 $$
-\text{Regret}_T
-=
-\sum_{t=1}^{T}
-\left(
-q_*(a^*)-q_*(A_t)
-\right)
+\text{Regret}_T = \sum_{t=1}^{T} \left(q_*(a^*)-q_*(A_t)\right)
 $$
 
 where:
