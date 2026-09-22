@@ -1,4 +1,4 @@
-# Adaptive Server Request Routing Using Reinforcement Learning: A Multi-Armed Bandit Approach
+# Agentic Load Balancer: Adaptive Server Request Routing Using Reinforcement Learning: A Multi-Armed Bandit Approach
 
 > REPO: [agentic-load-balancer-bandit-based](https://github.com/ignius299792458/agentic-load-balancer-bandit-based)
 
